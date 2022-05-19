@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.42105263157894735" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #32746D;">
+         <children>
+            <VBox layoutX="7.0" layoutY="54.0" maxWidth="-Infinity" prefHeight="528.0" prefWidth="318.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.5" prefHeight="40.0" prefWidth="376.0" styleClass="jumbo-title" text="Transfer" textAlignment="CENTER" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Calibri Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="377.0" styleClass="jumbo-desc" text="Transfer from your account to any account you wish" textAlignment="CENTER" textFill="#ffffff99">
+                     <font>
+                        <Font name="Roboto Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="14.0" prefWidth="339.0" styleClass="hr">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label text="From account:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="fromAccount" onAction="#onShowData" prefHeight="27.0" prefWidth="334.0" promptText="From account" styleClass="dropDown" stylesheets="@../resources/main.css">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin></ComboBox>
+                  <Label layoutX="10.0" layoutY="66.0" text="To account:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="toAccount" prefHeight="40.0" promptText="enter account name" />
+                  <Label layoutX="10.0" layoutY="110.0" text="Amount:" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="amount" prefHeight="40.0" prefWidth="316.0" promptText="0.00$ USD" styleClass="dropDown">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin></TextField>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onTransfer" prefHeight="32.0" prefWidth="317.0" styleClass="dashboard-btn" stylesheets="@../resources/main.css" text="TRANSFER" />
+                  <Label fx:id="feedback" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.5" prefHeight="40.0" prefWidth="376.0" styleClass="jumbo-title" textAlignment="CENTER" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Calibri Bold" size="30.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #32746D;">
+         <children>
+            <VBox layoutX="-5.0" prefHeight="683.0" prefWidth="557.0">
+               <children>
+                  <HBox prefHeight="58.0" prefWidth="569.0">
+                     <children>
+                        <Hyperlink onAction="#signOut" text="Sign out" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="400.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="309.0" prefWidth="385.0">
+                     <children>
+                        <VBox prefHeight="309.0" prefWidth="510.0">
+                           <children>
+                              <Label styleClass="jumbo-title" stylesheets="@../resources/main.css" text="Account Details" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="200.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefHeight="9.0" prefWidth="528.0" />
+                              <ButtonBar prefHeight="45.0" prefWidth="495.0">
+                                 <buttons>
+                                    <Label prefHeight="45.0" styleClass="jumbo" stylesheets="@../resources/main.css" text="Acc Number:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Bold" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="name" disable="true" prefHeight="35.0" prefWidth="280.0" />
+                                 </buttons>
+                                 <VBox.margin>
+                                    <Insets right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </ButtonBar>
+                              <ButtonBar layoutX="10.0" layoutY="55.0" prefHeight="45.0" prefWidth="40.0">
+                                 <buttons>
+                                    <Label styleClass="jumbo" stylesheets="@../resources/main.css" text="Balance:">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="balance" disable="true" prefHeight="35.0" prefWidth="280.0" />
+                                 </buttons>
+                                 <VBox.margin>
+                                    <Insets right="5.0" />
+                                 </VBox.margin>
+                              </ButtonBar>
+                              <ButtonBar prefHeight="45.0" prefWidth="489.0">
+                                 <buttons>
+                                    <Label prefHeight="45.0" prefWidth="395.0" styleClass="jumbo" stylesheets="@../resources/main.css" text="Email:">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="email" disable="true" prefHeight="35.0" prefWidth="149.0" />
+                                 </buttons>
+                                 <VBox.margin>
+                                    <Insets right="5.0" />
+                                 </VBox.margin>
+                              </ButtonBar>
+                              <ButtonBar layoutX="10.0" layoutY="145.0" prefHeight="45.0" prefWidth="489.0">
+                                 <buttons>
+                                    <Label prefHeight="45.0" prefWidth="395.0" styleClass="jumbo" stylesheets="@../resources/main.css" text="Address:">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="address" disable="true" prefHeight="35.0" prefWidth="149.0" />
+                                 </buttons>
+                                 <VBox.margin>
+                                    <Insets right="5.0" />
+                                 </VBox.margin>
+                              </ButtonBar>
+                              <ButtonBar layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="200.0">
+                                 <buttons>
+                                    <Label prefHeight="45.0" styleClass="jumbo" stylesheets="@../resources/main.css" text="DateOpened:">
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="date" disable="true" prefHeight="35.0" prefWidth="282.0" />
+                                 </buttons>
+                                 <VBox.margin>
+                                    <Insets right="5.0" />
+                                 </VBox.margin>
+                              </ButtonBar>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="41.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <TableView fx:id="table" prefHeight="283.0" prefWidth="525.0">
+                    <columns>
+                      <TableColumn fx:id="accountNames" prefWidth="208.0" text="Account Name" />
+                      <TableColumn fx:id="transaName" minWidth="0.0" prefWidth="161.0" text="Transaction" />
+                        <TableColumn fx:id="transDate" minWidth="0.0" prefWidth="183.0" text="Date" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

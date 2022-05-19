@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupController">
+   <children>
+      <VBox layoutX="69.0" layoutY="30.0" prefHeight="235.0" prefWidth="267.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/github%20projects/FinanceManager-main/FinanceManager-main/project/src/main/resources/financemanager/images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.5" prefHeight="18.0" prefWidth="326.0" styleClass="jumbo-title" stylesheets="@../resources/main.css" text="Sign up now" textAlignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="285.0" styleClass="jumbo-desc" stylesheets="@../resources/main.css" text="Please create a user using the form below." textFill="#00000099">
+               <font>
+                  <Font name="Roboto Regular" size="13.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <TextField fx:id="firstName" promptText="First name" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <TextField fx:id="lastName" promptText="Last name" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <TextField fx:id="email" promptText="E-mail" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <PasswordField fx:id="password" promptText="Password" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <PasswordField fx:id="confirmPassword" promptText="Confirm password" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signUp" prefHeight="32.0" prefWidth="387.0" styleClass="cta-button" stylesheets="@../resources/main.css" text="SIGN UP" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="140.0" stylesheets="@../resources/main.css" text="Already have an account?" />
+                  <Hyperlink onAction="#switchToLogin" stylesheets="@../resources/main.css" text="Login now!" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="feedback" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="267" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

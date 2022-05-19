@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
+   <children>
+      <BorderPane prefHeight="650.0" prefWidth="800.0" style="-fx-background-color: #9EC5AB;">
+         <bottom>
+            <Separator prefHeight="60.0" prefWidth="750.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox prefHeight="75.0" prefWidth="759.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Hyperlink alignment="CENTER" onAction="#switchToLogin" prefHeight="38.0" prefWidth="101.0" style="-fx-text-fill: black;" styleClass="signout-btn" stylesheets="@../resources/main.css" text="Sign out" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="649.0" />
+                     </HBox.margin>
+                  </Hyperlink>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="515.0" prefWidth="483.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <TableView fx:id="table" prefHeight="512.0" prefWidth="790.0" style="-fx-background-color: #32746D;">
+                     <columns>
+                        <TableColumn fx:id="idCol" prefWidth="85.0" text="ID" />
+                        <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="115.0" text="Name" />
+                        <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="124.0" text="Email" />
+                        <TableColumn fx:id="addressCol" minWidth="0.0" prefWidth="155.0" text="Address" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="479.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator layoutX="10.0" layoutY="61.0" prefHeight="2.0" prefWidth="310.0">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Button alignment="CENTER" layoutX="40.0" layoutY="130.0" mnemonicParsing="false" onAction="#switchToCustomer" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #104F55;" text="Create Customer" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator prefHeight="60.0" prefWidth="224.0" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToAccount" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #104F55;" text="Open Account" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator prefHeight="60.0" prefWidth="224.0" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToWithdraw" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #104F55;" text="Withdraw" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Separator prefHeight="60.0" prefWidth="224.0" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToDeposit" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #104F55;" text="Deposit" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

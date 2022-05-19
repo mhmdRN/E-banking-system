@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountController">
+   <children>
+      <VBox layoutX="51.0" prefHeight="600.0" prefWidth="299.0" styleClass="vbox" stylesheets="@../resources/main.css">
+         <children>
+            <Label fx:id="feedBack" alignment="CENTER" prefHeight="38.0" prefWidth="299.0" textFill="#c61b1b">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="300.0" styleClass="jumbo-title" stylesheets="@../resources/main.css" text="Create an account" />
+            <Label alignment="TOP_CENTER" prefHeight="20.0" prefWidth="298.0" text="open a new account with customer name" />
+            <Separator prefHeight="12.0" prefWidth="299.0" />
+            <TextField fx:id="name" disable="true" promptText="account number" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <ComboBox fx:id="cusName" onAction="#onIbanAccount" prefHeight="63.0" prefWidth="299.0" promptText="Select Customer name" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <ComboBox fx:id="currencyList" prefHeight="72.0" prefWidth="307.0" promptText="Select Currency" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <TextField fx:id="balance" layoutX="10.0" layoutY="64.0" promptText="balance" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <DatePicker fx:id="datepicker" prefHeight="25.0" prefWidth="303.0" styleClass="form-input" stylesheets="@../resources/main.css" />
+            <Button mnemonicParsing="false" onAction="#createAccount" prefHeight="37.0" prefWidth="313.0" styleClass="cta-button" stylesheets="@../resources/main.css" text="Create">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Hyperlink onAction="#switchToDashboard" prefHeight="22.0" prefWidth="107.0" stylesheets="@../resources/main.css" text="Back to dashboard">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Hyperlink>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
